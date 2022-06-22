@@ -1,6 +1,9 @@
 PYTHON NOTES:
 
 ***********************************************************************************
+Module 1:
+
+
 
 * one of the easiest and most powerful languages to learn.
 
@@ -179,4 +182,125 @@ Python Function Syntax --->
 
             print_name("Luke Skywalker")
 
+****************************************************************************************************************************
+Module 2:
 
+
+Multiple returns ---> 
+    Python functions are able to return multiple values.
+    Multiple return values should be listed after the return keyword and separated by a comma.
+    When multiple values are returned, they are returned in a tuple.
+        
+        def two_returns (param1, param2) :
+            value1 = param1 + param2
+            value2 = param2 - param1
+
+            return value1, value2
+
+    When a function returns multiple values, there are two ways to handle it: 
+        As a single tuple object, or as multiple objects.
+        By using the same number of variables as returned values, we can "catch" each value independently, instead of iterating to grab each value.
+
+
+Nested Functions --->
+    Just as in JS, Python functions may contain one or more internal (or nested) functions.
+
+Default Arguments --->
+    As in JS, Python functions may accept default arguments when declaring a function by using the assignment operator (=).
+    Important! Once a default argument has been declared, all subsequent arguments must also have default values in Python.
+
+Arbitrary Arguments(*args) ---> 
+    Python functions may accept an arbitrary number of arguments through use of the unpacking operator (*).
+
+    The unpacking operator (*) creates an iterable tuple.
+
+    Any parameter name may be used after the unpacking operator (*). *args is the standard when passing in a function argument.
+
+    The unpacking operator can be used in other places besides passing in function arguments.
+
+
+Recursion --->
+    when a function calls itself over and over until it reaches a a specified stopping condition.
+        Base case: When a condition has been reached, calls to the same function stop.
+        Recursive case: When the function calls itself again and again until the desired base case is met.
+
+            4! = 4*3*2*1 = 24
+            7! = 7*6*5*4*3*2*1 = 5040 || 7*6*5*24 = 5040
+
+    def recur_fact(n):
+        if n <= 1:
+            return n
+        
+    * two parts in a recursive function:
+        - base case
+        - recursive case
+
+
+Recursive --->
+
+        def find_fact(num):
+            if num == 1:
+                return 1
+
+            return (num * find_fact(num-1))
+
+        n=4
+        print(find_fact(n))
+
+    VS.
+
+Iterative --->
+
+        def find_fact(num):
+            factorial = 1
+
+            for i in range(1, num+1):
+                factorial = factorial * i
+            return factorial
+
+        n=4
+        print(find_fact(n))
+
+
+When should I use recursion?
+    •When the problem can be broken down into smaller and smaller repetitive problems.
+    •When a problem is defined in terms of itself.
+
+* use Direct Recursion as suppoped to Indirect Recursion most of the time...
+
+* Remember, a recursive function must have a base case, or the condition under which recursion should stop.
+    It must also have a recursive case that will go deeper into the call stack.
+
+kwargs --->
+    operates in a similar way to *args, but for keyword or named arguments.
+
+        def concat(**kwargs):
+            concatted = ""
+            for i in kwargs.values():
+                concatted += i
+            return concatted
+
+        concat (a="Writing", b="Python", c="Functions", d="Is, e="Great")
+
+    The function is defined using the keyword unpacking operator (**).
+    At call time, the function is ready to receive any number of named arguments.
+
+    **kwargs converts all arguments passed at call time to a dictionary.
+    This is why **kwargs only works with named arguments.
+
+Combining Features --->
+    These argument types we've covered so far may be combined within functions:
+        •Default arguments
+        •Arbitrary arguments
+        •Keyword arguments
+
+* Python has a number of incredibly useful functions that the interpreter already knows.
+    It is often best to find out if something you want to do already exists as a built-in function (such as finding the 
+    maximal element of a list).
+
+    Refer to Python documentation for a comprehensive list.
+
+Python Review (so far):
+    •**kwargs allows functions to accept any number of named arguments.
+    •Python has a number of very helpful built-in functions that can be called at will.
+    •Recursive logic in Python functions mirrors that of other languages, such as JS.
