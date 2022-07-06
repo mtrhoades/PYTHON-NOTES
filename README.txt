@@ -707,5 +707,93 @@ Database Integration with Flask --->
                     to_update.username = 'new_username'
                     models.db.session.commit()
 
-                    
+*****************************************************************************************************************************
+Module 7:
 
+Data Structures and Algorithms --->
+    - Data Structures are the way we store and retrieve data.
+
+    - An Algorithm is instructions the computer follows to carry out tasks.
+
+        Algorithm Complexity --->
+            A measure of how long an algorithm would take to complete based on an input size, usually denoted as n.
+
+        Big O Notation --->
+            describes the complexity of an algorithm using algebraic terms.
+
+                •O(1): constant
+                •O(n): linear
+                •O(n^2): quadratic
+
+                - Time and Space Complexity
+
+                        Notation    Name
+                        O(1)        constant
+                        O(log n)    logarithmic
+                        O(n)        linear
+                        O(n^2)      quadratic
+                        O(c^n)      exponential
+                        O(n!)       factorial
+
+
+[...]
+
+******************************************************************************************************************************
+Module 8:
+
+Sorting Algorithms --->
+
+    sorting (arranges data into an ordered sequence) vs. searching (retrieves an element from data structure)
+
+        bubble sort --->
+        Repeatedly compares adjacent elements and swaps elements if not in order.
+
+            Average Time complexity of bubble sort:
+                Quadratic: O(n^2)
+
+    Selection Sort ---> 
+        A list is divided into two parts: sorted and unsorted.
+            •The sorted part starts empty and is to the left.
+            •The unsorted part starts as the entire list and is to the right.
+            •The minimum element is selected from the unsorted part and swaps positions with the element at the start (on the left).
+                General idea: Iterate over the unsorted list and select the minimum element. Swap the leftmost unsorted position with the minimum element.
+    Insertion Sort --->
+        •Compares the current element to the previous elements until the correct place is found.
+        •In other words, it continues to move an element backwards when its value is less than the one behind it.
+        •The iteration stops when the element is greater than the one behind it.
+
+    * Bubble sort, selection sort, and insertion sort have an average quadratic time complexity, O(n^2).
+        - Merge sort, the next sorting algorithm we will learn about, is more efficient.
+
+    Merge Sort ---> 
+        •Divides a list in half and sorts both halves recursively. 
+        •Once the halves are sorted, they are merged together.
+            * Merge sort has an average time complexity of O(nlog(n)).
+
+    sort() and sorted() --->
+        Many people have spent a long time thinking about how to make sorting better and more efficient, so we get to use Python's sort functions instead of always implementing sorting algorithms ourselves.
+
+
+Sorting Algorithms:
+    •Bubble sort
+    •Selection sort
+    •Insertion sort
+    •Merge sort
+
+
+Binary Search ---> 
+
+    Linear
+        •Data does not need to be sorted
+        •Time complexity: O(n)
+    
+         vs. 
+
+    Binary Search
+        •Data must be sorted
+        •Time complexity: O(logn)
+
+
+
+
+        
